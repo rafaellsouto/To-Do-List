@@ -66,7 +66,7 @@ btn.onclick = function()
     }
 }
 
-btn.addEventListener('keydown', function()
+btn.addEventListener('keydown', function(event)
 {
     if( event.key === "Enter" )
     {
