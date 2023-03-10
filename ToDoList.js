@@ -66,6 +66,39 @@ btn.onclick = function()
     }
 }
 
+btn.addEventListener(function()
+{
+    if( event.key === 'Enter' )
+    {
+        let novaTarefa = input.value;
+
+        if( novaTarefa !== "" )
+        {
+            tarefas.push(novaTarefa);
+
+            renderizarTarefa();
+
+            input.value = '';
+
+            removerSpans();
+
+            savingStorage();
+        } else {
+            let card = document.querySelector('.card');
+
+            let span = document.createElement('span');
+
+            span.setAttribute('class', 'alert alert-warning');
+
+            let msgErro = document.createTextNode('Informe o valor.');
+
+            span.appendChild(msgErro);
+
+            card.appendChild(span);
+        }
+    }    
+})
+
 let removerSpans = () =>
 {
     let spans = document.querySelectorAll('span');
