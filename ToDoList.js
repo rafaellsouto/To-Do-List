@@ -68,7 +68,7 @@ btn.onclick = function()
 
 btn.addEventListener('keydown', function()
 {
-    if( event.key === 'Enter' )
+    if( event.key === "Enter" )
     {
         let novaTarefa = input.value;
 
